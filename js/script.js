@@ -66,4 +66,18 @@ $(document).ready(function () {
     player2.playerName = player2Name;
 
   });
+  $("button#new-game").click(function (event) {
+    $(".player-console").hide();
+    clearValues();
+    player1.newGame();
+    player2.newGame();
+    $("#round-total-1").empty();
+    $("#total-score-1").empty();
+    $("#die-roll-1").empty();
+    $("#round-total-2").empty();
+    $("#total-score-2").empty();
+    $("#die-roll-2").empty();
+
+    $(".start-menu").show();
+  });
 });
