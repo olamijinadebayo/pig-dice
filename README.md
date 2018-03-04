@@ -1,4 +1,4 @@
-# Anitas Kitchen
+# Pig Dice
 #### A pig dice game played between two people.
 ### 18th february 2018
 #### By **Adebayo Olamijin**
