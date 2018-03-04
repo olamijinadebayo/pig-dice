@@ -23,3 +23,30 @@ Player.prototype.rollone = function () {
     this.tempscore += this.roll;
   }
 }
+
+// holding functionality
+Player.prototype.hold = function () {
+  this.totalscore += this.tempscore;
+  this.tempscore = 0;
+  alert(this.name + "your turn is over,the next player should play now")
+}
+Player.prototype.winnerCheck = function () {
+  if (this.totalscore >= 100) {
+    alert(this.playerName + " You are the winner!");
+  }
+}
+
+Player.prototype.newGame = function () {
+  //debugger;
+  this.roll = 0;
+  this.tempscore = 0;
+  this.totalscore = 0;
+  this.playerName = "";
+}
+var clearValues = function () {
+  $(".player1name").val("");
+  $(".player2name").val("");
+}
+
+// user i
+$()
