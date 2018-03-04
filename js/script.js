@@ -48,7 +48,7 @@ var clearValues = function () {
   $(".player2name").val("");
 }
 
-// user i
+// user logic
 $(document).ready(function () {
   $("button#start").click(function () {
     player1 = new Player(true);
@@ -66,7 +66,7 @@ $(document).ready(function () {
     player2.playerName = player2Name;
 
   });
-  $("button#new-game").click(function (event) {
+  $("button#new-game").click(function () {
     $(".player-console").hide();
     clearValues();
     player1.newGame();
@@ -79,5 +79,17 @@ $(document).ready(function () {
     $("#die-roll-2").empty();
 
     $(".start-menu").show();
+  });
+  $("button#player1-roll").click(function () {
+    player1.roll = throwdice();
+    $("#die-roll-1").text(player1.roll);
+    player1.rollone();
+    $("#round-total-1").text(player1.tempscore);
+  });
+  $("button#player2-roll").click(function () {
+    player2.roll = throwdice();
+    $("#die-roll-2").text(player2.roll);
+    player2.rollone();
+    $("#round-total-2").text(player2.tempscore);
   });
 });
