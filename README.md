@@ -1,6 +1,6 @@
 # Pig Dice
 #### A pig dice game played between two people.
-### 18th february 2018
+
 #### By **Adebayo Olamijin**
 ## Description
 A game involving two players whereby each player gets to roll a die a certain number of times,
